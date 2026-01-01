@@ -54,33 +54,30 @@ http://localhost:3000/
 
 
 
-使用範例 (Usage Examples)
-啟用後，您可以直接用自然語言與 AI 對話，模型會自動判斷該呼叫哪個工具。
-
-情境 A：計算熱量與營養
-用戶：「我今年 25 歲，男生，175 公分 75 公斤，想要減脂，一週運動 3 天，幫我算營養素。」
-
-AI 回應：呼叫 calculate_daily_macros，回傳精準的 TDEE、赤字熱量與蛋白質攝取量。
-
-情境 B：查詢食物熱量 (API)
-用戶：「一杯星巴克焦糖拿鐵的熱量是多少？」
-
-AI 回應：呼叫 lookup_fatsecret_official，從資料庫撈取真實數據回報。
-
-情境 C：安排課表
-用戶：「我一週想練 5 天，想變壯，幫我排課表。」
-
-AI 回應：呼叫 get_weekly_workout_schedule，生成 PPL (推拉腿) 課表。
-
-情境 D：查詢詳細動作
-用戶：「那胸部要怎麼練？給我詳細菜單。」
-
-AI 回應：呼叫 get_detailed_body_part_routine，列出臥推、夾胸等動作的組數。
-
-情境 E：查詢成大健身房
-用戶：「今天成大健身房有開嗎？」
-
-AI 回應：呼叫 get_ncku_gym_schedule，爬取學校公告並結合當前時間判斷開放狀態。
+## 使用範例 (Usage Examples)
+*啟用後，您可以直接用自然語言與 AI 對話，模型會自動判斷該呼叫哪個工具。
+*
+*情境 A：計算熱量與營養
+*用戶：「我今年 25 歲，男生，175 公分 75 公斤，想要減脂，一週運動 3 天，幫我算營養素。」
+*
+*AI 回應：呼叫 calculate_daily_macros，回傳精準的 TDEE、赤字熱量與蛋白質攝取量。
+*
+*AI 回應：呼叫 lookup_fatsecret_official，從資料庫撈取真實數據回報。
+*
+*情境 B：安排課表
+*用戶：「我一週想練 5 天，想變壯，幫我排課表。」
+*
+*AI 回應：呼叫 get_weekly_workout_schedule，生成 PPL (推拉腿) 課表。
+*
+*情境 C：查詢詳細動作
+*用戶：「那胸部要怎麼練？給我詳細菜單。」
+*
+*AI 回應：呼叫 get_detailed_body_part_routine，列出臥推、夾胸等動作的組數。
+*
+*情境 D：查詢成大健身房
+*用戶：「今天成大健身房有開嗎？」
+*
+*AI 回應：呼叫 get_ncku_gym_schedule，爬取學校公告並結合當前時間判斷開放狀態。
 
 <img width="1436" height="1302" alt="Interaction Flow Chart" src="https://github.com/user-attachments/assets/2e26e98f-05a9-4f30-86e2-55b98e5c008e" />
 

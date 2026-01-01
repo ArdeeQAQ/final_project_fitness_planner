@@ -34,8 +34,8 @@ http://localhost:3000/
 ```
 
 設定︰
-新增空白工具： 進入 Open WebUI 介面，依序點擊 Workspace（工作區） > Tools（工具） > + Create Tool（建立工具）。
-匯入程式碼： 將 main.py 檔案中的所有程式碼複製，貼上到工具的程式碼編輯區，然後點擊 Save（儲存）。
+* 新增空白工具： 進入 Open WebUI 介面，依序點擊 Workspace（工作區） > Tools（工具） > + Create Tool（建立工具）。
+* 匯入程式碼： 將 main.py 檔案中的所有程式碼複製，貼上到工具的程式碼編輯區，然後點擊 Save（儲存）。
 進入設定： 儲存完成後，在該工具旁尋找 "Valves" 或 "Settings"（設定） 的圖示。
 輸入金鑰： 在設定欄位中，輸入您的 SPOTIFY_CLIENT_ID（Spotify 客戶端 ID）與 SPOTIFY_CLIENT_SECRET（Spotify 客戶端密鑰）。
 開啟新對話： 回到聊天介面，開啟一個新的對話視窗。

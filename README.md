@@ -2,13 +2,13 @@
 
 這是一個專為 **Open WebUI** 設計的 Python 工具 (Tool/Function Calling)。它能讓您的 AI 模型具備精準的數學運算能力，根據使用者的身體數值，科學地計算 **BMR (基礎代謝率)**、**TDEE (每日總消耗熱量)**，並自動生成客製化的**飲食建議**與**一週訓練課表**。
 
-## ✨ 特色功能
+## 特色功能
 
 * **科學運算**：使用 Mifflin-St Jeor 公式計算 BMR，解決 LLM 模型不擅長數學運算的問題。
 * **個性化目標設定**：
-* 🔥 **減脂 (Cut)**：熱量赤字 + 高蛋白。
-* 💪 **增肌 (Bulk)**：熱量盈餘 + 強度訓練。
-* ⚖️ **身體重組 (Recomp)**：維持熱量 + 體態調整。
+* **減脂 (Cut)**：熱量赤字 + 高蛋白。
+* **增肌 (Bulk)**：熱量盈餘 + 強度訓練。
+* **身體重組 (Recomp)**：維持熱量 + 體態調整。
 
 
 * **智慧排程**：根據目標自動生成 Push/Pull/Legs 或全身性訓練的一週課表。
@@ -17,6 +17,26 @@
 * 防止 `NoneType` 錯誤導致的對話崩潰。
 * 支援模糊語意輸入（如 "lose weight", "減肥", "變壯"）。
 
+##安裝與設定步驟
+安裝︰
+確保有安裝docker,openwebui
+
+開啟docker後，run︰
+```bash
+docker start open-webui0
+```
+
+
+http://localhost:3000/
+
+
+設定︰
+新增空白工具： 進入 Open WebUI 介面，依序點擊 Workspace（工作區） > Tools（工具） > + Create Tool（建立工具）。
+匯入程式碼： 將 main.py 檔案中的所有程式碼複製，貼上到工具的程式碼編輯區，然後點擊 Save（儲存）。
+進入設定： 儲存完成後，在該工具旁尋找 "Valves" 或 "Settings"（設定） 的圖示。
+輸入金鑰： 在設定欄位中，輸入您的 SPOTIFY_CLIENT_ID（Spotify 客戶端 ID）與 SPOTIFY_CLIENT_SECRET（Spotify 客戶端密鑰）。
+開啟新對話： 回到聊天介面，開啟一個新的對話視窗。
+啟用工具： 點擊輸入框旁邊的 + (Tools) 按鈕，並將 "Spotify" 工具切換為開啟狀態（Toggle on）。
 
 
 ## 🛠️ 安裝方式
@@ -43,7 +63,7 @@
 
 
 
-## 🚀 如何使用 (Usage)
+##  如何使用 (Usage)
 
 啟用工具後，您可以直接用自然語言與 AI 對話。
 

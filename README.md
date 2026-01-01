@@ -79,5 +79,6 @@ http://localhost:3000/
 * 
 * AI 回應：呼叫 get_ncku_gym_schedule，爬取學校公告並結合當前時間判斷開放狀態。
 
-<img width="1436" height="1302" alt="Interaction Flow Chart" src="https://github.com/user-attachments/assets/2e26e98f-05a9-4f30-86e2-55b98e5c008e" />
+
+<img width="611" height="737" alt="flowchart" src="https://github.com/user-attachments/assets/235abb91-e6b0-419f-b261-fceec554670d" />
 

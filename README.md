@@ -34,17 +34,6 @@ http://localhost:3000/
 ```
 
 設定︰
-* 新增空白工具： 進入 Open WebUI 介面，依序點擊 Workspace（工作區） > Tools（工具） > + Create Tool（建立工具）。
-* 匯入程式碼： 將 main.py 檔案中的所有程式碼複製，貼上到工具的程式碼編輯區，然後點擊 Save（儲存）。
-* 進入設定： 儲存完成後，在該工具旁尋找 "Valves" 或 "Settings"（設定） 的圖示。
-* 開啟新對話： 回到聊天介面，開啟一個新的對話視窗。
-* 啟用工具： 點擊輸入框旁邊的 + (Tools) 按鈕，並將 "Spotify" 工具切換為開啟狀態（Toggle on）。
-
-
-## 🛠️ 安裝方式
-
-此工具專門用於 **Open WebUI** 環境。
-
 1. **開啟 Open WebUI**：
 登入您的 Open WebUI 介面，點擊右上角頭像或選單，進入 **Workspace (工作區)**。
 2. **建立新工具**：

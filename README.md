@@ -17,7 +17,8 @@
 * 防止 `NoneType` 錯誤導致的對話崩潰。
 * 支援模糊語意輸入（如 "lose weight", "減肥", "變壯"）。
 
-##安裝與設定步驟
+
+## 安裝與設定步驟
 安裝︰
 確保有安裝docker,openwebui
 
@@ -26,9 +27,11 @@
 docker start open-webui0
 ```
 
-
+然後，
+在瀏覽器打開︰
+```bash
 http://localhost:3000/
-
+```
 
 設定︰
 新增空白工具： 進入 Open WebUI 介面，依序點擊 Workspace（工作區） > Tools（工具） > + Create Tool（建立工具）。

@@ -54,48 +54,33 @@ http://localhost:3000/
 
 
 
-##  如何使用 (Usage)
+使用範例 (Usage Examples)
+啟用後，您可以直接用自然語言與 AI 對話，模型會自動判斷該呼叫哪個工具。
 
-啟用工具後，您可以直接用自然語言與 AI 對話。
+情境 A：計算熱量與營養
+用戶：「我今年 25 歲，男生，175 公分 75 公斤，想要減脂，一週運動 3 天，幫我算營養素。」
 
-### 範例指令：
+AI 回應：呼叫 calculate_daily_macros，回傳精準的 TDEE、赤字熱量與蛋白質攝取量。
 
-**1. 資訊完整的查詢 (最精準)**
+情境 B：查詢食物熱量 (API)
+用戶：「一杯星巴克焦糖拿鐵的熱量是多少？」
 
-> 「幫我規劃增肌菜單，我 28 歲，男生，身高 175 公分，體重 70 公斤，平常久坐。」
+AI 回應：呼叫 lookup_fatsecret_official，從資料庫撈取真實數據回報。
 
-**2. 模糊查詢 (觸發防呆機制)**
+情境 C：安排課表
+用戶：「我一週想練 5 天，想變壯，幫我排課表。」
 
-> 「我想減肥，幫我排課表。」
-> *(AI 會自動帶入預設數值計算，並提醒您補充正確資料)*
+AI 回應：呼叫 get_weekly_workout_schedule，生成 PPL (推拉腿) 課表。
 
-**3. 指定目標**
+情境 D：查詢詳細動作
+用戶：「那胸部要怎麼練？給我詳細菜單。」
 
-> 「我想要身體重組，每週運動 5 天，幫我算熱量。」
+AI 回應：呼叫 get_detailed_body_part_routine，列出臥推、夾胸等動作的組數。
 
-## 📋 參數說明 (Parameters)
+情境 E：查詢成大健身房
+用戶：「今天成大健身房有開嗎？」
 
-工具會自動從您的對話中提取以下參數：
+AI 回應：呼叫 get_ncku_gym_schedule，爬取學校公告並結合當前時間判斷開放狀態。
 
-| 參數 | 說明 | 預設值 (若未提供) |
-| --- | --- | --- |
-| `weight_kg` | 體重 (公斤) | 70.0 |
-| `height_cm` | 身高 (公分) | 173.0 |
-| `age` | 年齡 | 25 |
-| `gender` | 性別 (M/F) | "M" (男) |
-| `activity_level` | 活動量 (sedentary/light/moderate/active) | "sedentary" (久坐) |
-| `goal` | 目標 (cut/bulk/recomp) | "recomp" (維持) |
+<img width="1436" height="1302" alt="Interaction Flow Chart" src="https://github.com/user-attachments/assets/2e26e98f-05a9-4f30-86e2-55b98e5c008e" />
 
-## ⚠️ 常見問題 (Troubleshooting)
-
-**Q: 出現 `unsupported operand type(s) for *: 'int' and 'NoneType'` 錯誤？**
-A: 這表示您使用的舊版程式碼沒有處理空值。請確保您使用的是最新版（包含 `is_estimated` 與 `if variable is None` 檢查邏輯）的程式碼。
-
-**Q: 模型一直不呼叫工具，而是自己亂回答？**
-A:
-
-1. 請確認您使用的模型 (Model) 支援 **Function Calling** (例如 Llama 3, Mistral, Gemma 2, Qwen 2.5)。
-2. 檢查工具的 **Description** 是否填寫正確，AI 依賴描述來判斷何時使用工具。
-
-**Q: 可以修改訓練課表嗎？**
-A: 可以。請修改程式碼中的 `workout_options` 字典與 `weekly_plan` 列表，即可自訂您喜歡的動作與循環。
